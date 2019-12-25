@@ -14,3 +14,15 @@ puts b.year
 b += 10
 puts b
 
+
+c = Date.new(1993, 2, 24).wday
+puts c
+
+
+tomorrow = Date.new(1993, 2, 25)
+d = tomorrow.wday
+puts d
+
+
+e = Date.new(2019, 12, 25).strftime("%a")
+puts e
