@@ -26,8 +26,18 @@ puts %w[Su Mo Tu We Th Fr Sa].join(' ')
 # 1日と末日
 #Date.newの引数は、(年,月,日)の順番
 firstday = Date.new(Date.today.year, Date.today.month, 1)
+#末日はdayの部分に -1 と書くとできる。
 lastday = Date.new(Date.today.year, Date.today.month, -1)
+#1~末日まで。map(何か|ブロック)ブロック（指定しているもの）の戻り値（結果）を作成して返す。
+#rjstメソッドは、centerと同じように、引数の長さをもつ文字列を作成する。r=右側なので、右詰で左側を空白で埋める。つまりカレンダーのために２文字分スペースを作っている。
 days = (1..lastday.day).map{ |n| n.to_s.rjust(2)}
+
+#firstday.wdayの数字は0〜
+#Array.new(1, ' ' )の数字は1〜
+#だから空白がたまたま合う。
+
+#flatten：同じ次元にする。[ ] を外す。
+#each_slice：n個区切りでArrayを作っている。
 days = Array.new(firstday.wday, '  ').push(days).flatten.each_slice(7).to_a
 
 
