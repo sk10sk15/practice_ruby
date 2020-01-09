@@ -30,18 +30,22 @@ firstday = Date.new(Date.today.year, Date.today.month, 1)
 lastday = Date.new(Date.today.year, Date.today.month, -1)
 #1~末日まで。map(何か|ブロック)ブロック（指定しているもの）の戻り値（結果）を作成して返す。
 #rjstメソッドは、centerと同じように、引数の長さをもつ文字列を作成する。r=右側なので、右詰で左側を空白で埋める。つまりカレンダーのために２文字分スペースを作っている。
+# to_sは前にある n を返している
+# https://qiita.com/yut_h1979/items/aafece7404a1002c0105
 days = (1..lastday.day).map{ |n| n.to_s.rjust(2)}
 
 #firstday.wdayの数字は0〜
 #Array.new(1, ' ' )の数字は1〜
 #だから空白がたまたま合う。
 
-#flatten：同じ次元にする。[ ] を外す。
-#each_slice：n個区切りでArrayを作っている。
+# flatten：同じ次元にする。[ ] を外す。
+# each_slice：n個区切りでArrayを作っている。
+# to_a は Arrayクラスのものを使っていて、each_slice(7)を返している。
+# https://qiita.com/yut_h1979/items/aafece7404a1002c0105
+# wdayは曜日を返す。0〜6
 days = Array.new(firstday.wday, '  ').push(days).flatten.each_slice(7).to_a
 
-
+# weekという変数を処理する。
 days.each do |week|
   puts week.join(' ')
 end
-
