@@ -8,7 +8,7 @@ require 'date'
 # Date.new(2020, 6, 1)的な？
 # 使い方がわかっていない。
 
-year = ARGV[0]
-month = ARGV[1]
+year = ARGV[0].to_i
+month = ARGV[1].to_i
 y = Date.new(year, month, 1)
 puts y
