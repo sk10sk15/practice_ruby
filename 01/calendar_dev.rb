@@ -4,6 +4,8 @@
 
 #Dateクラスは組み込みクラスとなっていないため、使うにはまず宣言しないといけない。
 require 'date'
+# end_of_monthはRailsだから、以下を定義しないといけない。
+require `active_support/all`
 
 # 年月
 #starftimeにフォーマット文字列を使って、文字列を出力できる。
@@ -43,9 +45,11 @@ days = (1..lastday.day).map{ |n| n.to_s.rjust(2)}
 # to_a は Arrayクラスのものを使っていて、each_slice(7)を返している。
 # https://qiita.com/yut_h1979/items/aafece7404a1002c0105
 # wdayは曜日を返す。0〜6
-days = Array.new(firstday.wday, '  ').push(days).flatten.each_slice(7).to_a
+# 新しい定義のdaysは、定義を完了させるまでは前の方のdays
+# だけどweeksにした。
+weeks = Array.new(firstday.wday, '  ').push(days).flatten.each_slice(7).to_a
 
 # weekという変数を処理する。
-days.each do |week|
+weeks.each do |week|
   puts week.join(' ')
 end
