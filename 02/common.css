@@ -1,0 +1,29 @@
+h1 {
+    font-size: 18px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    width: 25px;
+}
+
+td:first-child {
+    color: red;
+}
+
+td:last-child {
+    color: royalblue;
+}
+.date {
+  margin: 10px 10px 10px 50px;
+}
+.date0 {
+  margin: 10px 10px 10px 50px;
+}
