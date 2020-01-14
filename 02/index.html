@@ -13,14 +13,17 @@
   
   <div class="bottun">
     <p>ここに入力エリアと表示ボタンを作る</p>
-    <textarea name="20xx" rows="1" cols="10"></textarea>年
-    <textarea name="4" rows="1" cols="10"></textarea>月
-    <input type="submit" value="表示する" id="bottun">
+    <form name="form1">
+      <textarea name="textarea1" value="1" rows="1" cols="10"></textarea>年
+      <textarea name="textarea2" value="1" rows="1" cols="10"></textarea>月
+    </form>
+    <input type="button" value="表示する" onclick="clickBtn1()">
   </div>
   
   <div id="calendar">
     <p>カレンダーを表示</p>
     <table>
+      <div class="date"><span id="span1"></span>年 / <span id="span2"></span>月</div>
       <tr>
         <th>日</th>
         <th>月</th>

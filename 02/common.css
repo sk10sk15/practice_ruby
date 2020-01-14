@@ -21,3 +21,6 @@ td:first-child {
 td:last-child {
     color: royalblue;
 }
+.date {
+  margin: 10px 10px 10px 50px;
+}
