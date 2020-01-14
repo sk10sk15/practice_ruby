@@ -18,11 +18,13 @@
       <textarea name="textarea2" value="1" rows="1" cols="10"></textarea>月
     </form>
     <input type="button" value="表示する" onclick="clickBtn1()">
+    <input type="button" value="クリア" onclick="clickBtn2()">
   </div>
   
   <div id="calendar">
     <p>カレンダーを表示</p>
     <table>
+      <div class="date0"><span id="span0"></span></div>
       <div class="date"><span id="span1"></span>年 / <span id="span2"></span>月</div>
       <tr>
         <th>日</th>
