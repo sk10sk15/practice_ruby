@@ -11,6 +11,7 @@ td {
     border: 1px solid #ddd;
     padding: 5px;
     text-align: center;
+    width: 25px;
 }
 
 td:first-child {
