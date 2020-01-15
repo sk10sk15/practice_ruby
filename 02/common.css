@@ -12,6 +12,7 @@ td {
     padding: 5px;
     text-align: center;
     width: 25px;
+    height: 25px;
 }
 
 td:first-child {
