@@ -69,5 +69,9 @@ function clickBtn2(){
 	document.getElementById("span2").textContent = "";
   document.form1.textarea1.value = "";
   document.form1.textarea2.value = "";
-  document.querySelectorAll("td").textContent = "";
+  for (let w = 0; w < 6; w++) {
+    for (let d = 0; d < 7; d++) {
+      document.querySelectorAll("tr")[w + 1].querySelectorAll("td")[d].textContent = "";
+    }
+  }
 }
